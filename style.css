@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start;  /* for mobile devices only */
+  justify-content: center;
+  align-items: center;
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+.main {
+  overflow: auto;
+  scrollbar-width: none;
+  height: 90vh;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.top {
+  width: 100%;
+  height: 44%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.with-linear-gradient {
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-image-source: linear-gradient(120deg, rgb(55, 237, 55), rgb(250, 224, 66));
+  border-image-slice: 1;
+}
+
+.history {
+  opacity: 0.6;
+  font-size: 18px;
+  text-align: end;
+  padding-right: 16px;
+  margin: 0;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+
+.total {
+  font-size: 45px;
+  text-align: end;
+  margin: 0;
+  padding-right: 15px;
+  letter-spacing: 1px;
+  font-weight: 520;
+  word-break: break-all;
+}
+
+.bottom {
+  width: 100%;
+  height: 56%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding-bottom: 2%;
+}
+
+.buttons-table {
+  width: 100%;
+  height: 100%;
+}
+
+.buttons-table td {
+  width: 20%;
+  height: 20%;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.total-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.total-btn {
+  height: 88%;
+  width: 70%;
+}
+
+.total_btn {
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgb(55, 237, 55);
+  color: #fff;
+}
+
+
+button:active {
+  background-color: #f0f0f0;
+  border-radius: 80px;
+}
+
+.delete-operators img {
+  width: 35%;
+}
+
+.delete-operators {
+  color: rgba(255, 0, 0, 0.799);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.operators {
+  color: rgb(55, 237, 55);
+}
+
+.font {
+  font-size: 2.4rem;
+  font-weight: 400 !important;
+}
+
+.dark {
+  .container {
+    background: #232526; 
+    background: -webkit-linear-gradient(
+      to right,
+      #414345,
+      #232526
+    ); 
+    background: linear-gradient(
+      to right,
+      #414345,
+      #232526
+    );
+  }
+  .main {
+    border: 1px solid rgba(128, 128, 128, 0.185);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  .top {
+    background-color: #000;
+    color: #fff;
+  }
+  .bottom {
+    background-color: #2b2b2b;
+  }
+  button {
+    color: #fff;
+  }
+  button:active {
+    background-color: #333;
+  }
+  .operators {
+    color: rgba(55, 237, 55, 0.824);
+  }
+  .delete-operators {
+    color: red;
+  }
+  .history {
+    color: #ddd;
+  }
+  .total_btn {
+    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(55, 237, 55, 0.824);
+  }
+}
+
+@media screen and  (max-width: 900px)   {
+  .main {
+    width: 445px;
+    height: 850px;
+  }
+  button {
+    font-size: 2rem;
+  }
+  .font {
+    font-size: 3rem;
+  }
+}
+
+@media screen and  (max-width: 700px)  {
+  .main {
+    width: 335px;
+    height: 90%;
+  }
+  button {
+    font-size: 1.8rem;
+  }
+  .font {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media (max-width: 430px) {
+  .main {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .top {
+    height: 44%;
+  }
+  .bottom {
+    height: 56%;
+  }
+  button {
+    font-size: 1.9rem;
+  }
+  .font {
+    font-size: 2.9rem;
+  }
+  .total_btn {
+    font-size: 2.5rem;
+  }
+  .total-btn {
+    height: 90%;
+    width: 65%;
+  }
+}
