@@ -19,6 +19,7 @@ body {
 
 .container {
   height: 100vh;
+  height: -webkit-fill-available;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -235,7 +236,8 @@ button:active {
 
 @media (max-width: 430px) {
   .main {
-    height: 100%;
+    height: 100vh;
+    height: -webkit-fill-available;
     width: 100%;
     border-radius: 5px;
   }
