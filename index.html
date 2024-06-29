@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator - Free Online Calculator</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" href="/assets/calculator.svg">
+    <link rel="icon" href="/assets/calculator.svg" />
   </head>
   <!-- <body class="dark"> -->
-    <body>
+  <body>
     <div class="container" id="display">
       <div class="main toggle">
         <div class="top with-linear-gradient">
-          <p class="history"></p>
-          <p class="total"></p>
+          <div class="darkmode">
+            <button class="switch"></button>
+          </div>
+          <div class="text">
+            <p class="history"></p>
+            <p class="total"></p>
+          </div>
         </div>
         <div class="bottom">
           <table class="buttons-table">
@@ -61,6 +66,6 @@
       </div>
     </div>
     <!-- /* Script */ -->
-     <script src="/app.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>

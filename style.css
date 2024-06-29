@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  transition: all 0.4s ease-in;
 }
 
 html {
@@ -50,7 +51,7 @@ body {
   width: 100%;
   height: 44%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: end;
   flex-direction: column;
   background-color: #f0f0f0;
@@ -60,12 +61,36 @@ body {
 .with-linear-gradient {
   border-style: solid;
   border-width: 0 0 2px 0;
-  border-image-source: linear-gradient(120deg, rgb(55, 237, 55), rgb(250, 224, 66));
+  border-image-source: linear-gradient(
+    120deg,
+    rgb(55, 237, 55),
+    rgb(250, 224, 66)
+  );
   border-image-slice: 1;
 }
 
+.darkmode {
+  padding: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.text {
+  width: 100%;
+}
+
+.switch {
+  /* border: 1px solid red; */
+  background-color: #232526;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
 .history {
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 18px;
   text-align: end;
   padding-right: 16px;
@@ -106,7 +131,8 @@ body {
 
 button {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  border-radius: 30px;
   font-size: 1.6rem;
   font-weight: 500;
   border: none;
@@ -134,10 +160,14 @@ button {
   color: #fff;
 }
 
+.total_btn:hover {
+  background-color: rgb(0, 231, 0);
+  transform: scale(1.01);
+}
 
-button:active {
-  background-color: #f0f0f0;
-  border-radius: 80px;
+button:hover {
+  transform: scale(1.05);
+  background-color: #e2e2e28b;
 }
 
 .delete-operators img {
@@ -162,17 +192,9 @@ button:active {
 
 .dark {
   .container {
-    background: #232526; 
-    background: -webkit-linear-gradient(
-      to right,
-      #414345,
-      #232526
-    ); 
-    background: linear-gradient(
-      to right,
-      #414345,
-      #232526
-    );
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
   }
   .main {
     border: 1px solid rgba(128, 128, 128, 0.185);
@@ -188,8 +210,8 @@ button:active {
   button {
     color: #fff;
   }
-  button:active {
-    background-color: #333;
+  button:hover {
+    background-color: #41434587;
   }
   .operators {
     color: rgba(55, 237, 55, 0.824);
@@ -205,9 +227,13 @@ button:active {
     height: 100%;
     background-color: rgba(55, 237, 55, 0.824);
   }
+  .total_btn:hover {
+    background-color: rgb(0, 231, 0);
+    transform: scale(1.01);
+  }
 }
 
-@media screen and  (max-width: 900px)   {
+@media screen and (max-width: 900px) {
   .main {
     width: 445px;
     height: 850px;
@@ -220,7 +246,7 @@ button:active {
   }
 }
 
-@media screen and  (max-width: 700px)  {
+@media screen and (max-width: 700px) {
   .main {
     width: 335px;
     height: 90%;
@@ -233,13 +259,18 @@ button:active {
   }
 }
 
-
 @media (max-width: 430px) {
   .main {
     height: 100vh;
     height: -webkit-fill-available;
     width: 100%;
     border-radius: 5px;
+  }
+  .history{
+    font-size: 21px;
+  }
+  .total{
+    font-size: 50px;
   }
   .top {
     height: 44%;
@@ -259,5 +290,14 @@ button:active {
   .total-btn {
     height: 90%;
     width: 65%;
+  }
+  .switch{
+    height: 30px;
+    width: 30px;
+  }
+  .dark {
+    .main {
+      border: none;
+    }
   }
 }
